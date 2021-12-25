@@ -1,0 +1,19 @@
+class Utils(object):
+    def __init__(self):
+        pass
+
+    def methods(self, myClass):
+        _=list()
+        for func in dir(myClass):
+            if callable(getattr(myClass, func)):
+                if "__" in str(func):
+                    _.append(func)
+        return _ # returns the list of methods in the given class
+
+    def functions(self, myClass):
+        _=list()
+        for func in dir(myClass):
+            if callable(getattr(myClass, func)):
+                if not "__" in str(func):
+                    _.append(func)
+        return _ # returns the list of functions in the given class
