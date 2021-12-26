@@ -2,7 +2,7 @@ class Utils(object):
     def __init__(self):
         pass
 
-    def methods(self, myClass):
+    def class_methods(self, myClass):
         _=list()
         for func in dir(myClass):
             if callable(getattr(myClass, func)):
@@ -10,7 +10,7 @@ class Utils(object):
                     _.append(func)
         return _ # returns the list of methods in the given class
 
-    def functions(self, myClass):
+    def class_functions(self, myClass):
         _=list()
         for func in dir(myClass):
             if callable(getattr(myClass, func)):
