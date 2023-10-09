@@ -1,1 +1,0 @@
-# Czym jest regresja liniowa?
